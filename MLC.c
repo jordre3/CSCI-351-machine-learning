@@ -29,12 +29,6 @@ int main(int argc, char* argv){
 
     fscanf(file, "%d %d", &numReviewers, &numMovies);
 
-    // double movieOne[numReviewers];
-    // double movieTwo[numReviewers];
-    // double movieThree[numReviewers];
-    // double movieFour[numReviewers];
-    // double movieFive[numReviewers];
-
     double * movies = malloc(numMovies * numReviewers * sizeof(*movies));
     assert(movies);
 
@@ -68,7 +62,6 @@ int main(int argc, char* argv){
     for(int i = 0; i<numReviewers; i++) {
         viewerDist = 0;
         for(int j = 0; j<numMovies - 1; j++) {
-            //make abs
            viewerDist += fabs(userMovies[j] - movies[i * numMovies + j]); 
         }
         distances[i].distance = viewerDist;
