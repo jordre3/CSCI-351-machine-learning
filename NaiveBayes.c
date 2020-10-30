@@ -46,8 +46,8 @@ main(int argc, char * argv[])
 //   assert(2 == argc);
 
 //   /* ... */
-//   char const * const fn = argv[1];
-  char const * const fn = "ML-ratings.txt";
+  char const * const fn = argv[1];
+//   char const * const fn = "ML-ratings.txt";
 
   /* Validate input. */
   assert(fn);
