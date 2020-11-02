@@ -47,7 +47,7 @@ main(int argc, char * argv[])
 
 //   /* ... */
   char const * const fn = argv[1];
-//   char const * const fn = "ML-ratings.txt";
+  // char const * const fn = "ML-ratings.txt";
 
   /* Validate input. */
   assert(fn);
@@ -119,9 +119,6 @@ main(int argc, char * argv[])
       }
   }
 
-//   for (int k = 0; k < (m-1) * 10; k++) {
-//     printf("prob[%d] = %lf\n", k, prob2[k]);
-//   }
 
   /* Finalize computation of probabilities. */
   for (int k = 0; k < 10; k++) {
@@ -155,6 +152,7 @@ main(int argc, char * argv[])
   /* Deallocate memory. */
   free(rating);
   free(urating);
+  free(prob2);
 
   return EXIT_SUCCESS;
 }
