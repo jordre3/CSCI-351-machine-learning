@@ -97,16 +97,16 @@ main(int argc, char * argv[])
     }
   }
 
-  double * prob2 = malloc((m -1) * 10 * sizeof(double));
+  double * prob2 = calloc(10 * (m-1), (m -1) * 10 * sizeof(double));
   for (int i = 0; i < (m-1); i++){
       for(int k = 0; k < n; k++){
             if(rating[k*m + i] == urating[i]){
                 int newRate = (rating[k*m + (m - 1)] * 2) - 1;
                 prob2[10*i + newRate] += 1;
             }
-        }     
+        }
   }
-  
+
 
   for(int i = 0; i < (m-1); i++){
       for(int k = 0; k < 10; k++){
@@ -125,7 +125,7 @@ main(int argc, char * argv[])
     prob[k] /= n;
   }
 
-  
+
 
   for(int i = 0; i < (m-1); i++){
       for(int k = 0; k < 10; k++){
